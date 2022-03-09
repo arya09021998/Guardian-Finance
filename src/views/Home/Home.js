@@ -24,10 +24,14 @@ import ProgressCountdown from '../Cemetery/ProgressCountdown';
 import { tomb as tombTesting, tShare as tShareTesting } from '../../tomb-finance/deployments/deployments.testing.json';
 import { tomb as tombProd, tShare as tShareProd } from '../../tomb-finance/deployments/deployments.mainnet.json';
 import MetamaskFox from '../../assets/img/metamask-fox.svg';
+import TwitterImage from '../../assets/img/twitter.svg';
+import DiscordImage from '../../assets/img/discord.svg';
+import TelegramImage from '../../assets/img/telegram.svg';
+
 import { Box, Button, Card, CardContent, Grid, Paper } from '@material-ui/core';
 import ZapModal from '../Bank/components/ZapModal';
 
-// import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import useTombFinance from '../../hooks/useTombFinance';
 
 const BackgroundImage = createGlobalStyle`
@@ -37,16 +41,16 @@ const BackgroundImage = createGlobalStyle`
   }
 `;
 
-// const useStyles = makeStyles((theme) => ({
-//   button: {
-//     [theme.breakpoints.down('415')]: {
-//       marginTop: '10px',
-//     },
-//   },
-// }));
+const useStyles = makeStyles((theme) => ({
+  button: {
+    [theme.breakpoints.down('415')]: {
+      marginTop: '10px',
+    },
+  },
+}));
 
 const Home = () => {
-  // const classes = useStyles();
+  const classes = useStyles();
   const TVL = useTotalValueLocked();
   const tombFtmLpStats = useLpStats('GUARDIAN-FTM-LP');
   const tShareFtmLpStats = useLpStats('SHIELD-FTM-LP');
@@ -185,10 +189,25 @@ const Home = () => {
         </Grid>
         </Grid>
 
+        <Grid item xs={12} sm={12} align="center">
+          <Button target="_blank" href="https://twitter.com/CaffeineFund" style={{ margin: '0 10px', backgroundColor:'#1da1f2', padding:'8px 15px' }}>
+            <img alt="twitter" src={TwitterImage} className={classes.img} style={{marginRight:'10px'}}/>
+            Twitter
+          </Button>
+          <Button target="_blank" href="https://discord.gg/9BV3bTd646" style={{ margin: '0 10px', background:'#1da1f2', padding:'8px 15px'  }}>
+            <img alt="discord" src={TelegramImage} className={classes.img} style={{marginRight:'10px', width: '18px'}}/>
+            Telegram
+          </Button>
+          <Button target="_blank" href="https://discord.gg/9BV3bTd646" style={{ margin: '0 10px', background:'#5865f2', padding:'8px 15px'  }}>
+            <img alt="discord" src={DiscordImage} className={classes.img} style={{marginRight:'10px', width: '18px'}}/>
+            Discord
+          </Button>
+        </Grid>
+
         {/* TVL */}
         <Grid item xs={12} sm={4}>
-          <Card>
-            <CardContent align="center">
+          <Card style={{ height:'125px' }}>
+            <CardContent align="center" style={{paddingTop:'26px'}}>
               <h2>Total Value Locked</h2>
               <CountUp style={{ fontSize: '25px' }} end={TVL} separator="," prefix="$" />
             </CardContent>
@@ -198,18 +217,24 @@ const Home = () => {
         {/* Wallet */}
         <Grid item xs={12} sm={8}>
           <Card style={{ height: '100%' }}>
-            <CardContent align="center" style={{ marginTop: '2.5%' }}>
+            <CardContent align="center" style={{padding: '16px' }}>
               <Button color="primary" href="/milkyway" variant="contained" style={{marginRight : "10px", marginTop : "10px"}}>
                 Stake Now
-              </Button>
-              <Button href="/farm" variant="contained" style={{marginRight : "10px", marginTop : "10px"}}>
-                Farm Now
               </Button>
               <Button color="primary" target="_blank" href={buyTombAddress} variant="contained" style={{marginRight : "10px", marginTop : "10px"}}>
                 Buy GUARDIAN
               </Button>
+              <Button color="primary" variant="contained" target="_blank" href={`https://dexscreener.com/fantom/${tomb.address}`} style={{ marginRight: '10px', marginTop : "10px" }}>
+                GUARDIAN Chart
+              </Button><br/>
+              <Button href="/farm" variant="contained" style={{marginRight : "10px", marginTop : "10px"}}>
+                Farm Now
+              </Button>
               <Button variant="contained" target="_blank" href={buyTShareAddress} style={{marginRight : "10px", marginTop : "10px"}}>
                 Buy SHIELD
+              </Button>
+              <Button variant="contained" target="_blank" href={`https://dexscreener.com/fantom/${tShare.address}`} style={{ marginRight: '10px', marginTop : "10px" }}>
+                SHIELD Chart
               </Button>
             </CardContent>
           </Card>

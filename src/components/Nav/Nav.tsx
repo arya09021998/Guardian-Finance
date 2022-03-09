@@ -118,10 +118,10 @@ const Nav = () => {
               <Link color="textPrimary" to="/bond" className={classes.link}>
                 Bond
               </Link>
-              <a href="https://degenwhale.money" target="_blank" rel="noopener noreferrer" className={classes.link}>
+              {/* <a href="https://degenwhale.money" target="_blank" rel="noopener noreferrer" className={classes.link}>
                 Vaults
               </a>
-              {/* <Link color="textPrimary" to="/sbs" className={classes.link}>
+              <Link color="textPrimary" to="/sbs" className={classes.link}>
                 SBS
               </Link>
               <Link color="textPrimary" to="/liquidity" className={classes.link}>
@@ -177,10 +177,11 @@ const Nav = () => {
                 <ListItemLink primary="Bond" to="/bond" />
                 {/* <ListItemLink primary="SBS" to="/sbs" />
                 <ListItemLink primary="Liquidity" to="/liquidity" />
-                <ListItemLink primary="Regulations" to="/regulations" /> */}
+                <ListItemLink primary="Regulations" to="/regulations" />
                 <ListItem button component="a" href="https://degenwhale.money">
                   <ListItemText>Vaults</ListItemText>
                 </ListItem>
+                 */}
                 <ListItem button component="a" href="https://guardian-finance88.gitbook.io/untitled/">
                   <ListItemText>Docs</ListItemText>
                 </ListItem>
