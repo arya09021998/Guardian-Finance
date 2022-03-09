@@ -23,8 +23,8 @@ const MigrationDisclaimerModal: React.FC<MigrationDisclaimerModalProps> = ({ onC
       <ModalTitle text={`Migration Disclaimer`} />
       <div>
         <StyledText>
-          Due to the upgrade, all Milkyway functionalities other than [Settle and withdraw] has been disabled for users
-          who staked in legacy Milkyway. Please withdraw all balances from the previous Milkyway after the update.
+          Due to the upgrade, all Aegis functionalities other than [Settle and withdraw] has been disabled for users
+          who staked in legacy Aegis. Please withdraw all balances from the previous Aegis after the update.
         </StyledText>
       </div>
       <ModalActions>

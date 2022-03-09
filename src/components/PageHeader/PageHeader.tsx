@@ -30,7 +30,7 @@ const StyledPageHeader = styled.div`
 
 const StyledTitle = styled.h1`
   color: ${(props) => props.theme.color.grey[100]};
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 700;
   margin: 0;
   padding: 0;
@@ -38,7 +38,7 @@ const StyledTitle = styled.h1`
 
 const StyledSubtitle = styled.h3`
   color: ${(props) => props.theme.color.grey[400]};
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   margin: 0;
   padding: 0;

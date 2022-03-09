@@ -40,7 +40,7 @@ const Cemetery = () => {
           {!!account ? (
             <Container maxWidth="lg">
               <Typography color="textPrimary" align="center" variant="h3" gutterBottom>
-                Asteroid Belt
+                Fortress
               </Typography>
 
               <Box mt={5}>
@@ -48,7 +48,7 @@ const Cemetery = () => {
                   <Typography color="textPrimary" variant="h4" gutterBottom>
                     Earn SHIELD by staking LP
                   </Typography>
-                  <Alert variant="filled" style={{background: '#b648bd'}}>
+                  <Alert variant="filled" style={{background: '#664b55', padding:'12px 20px', fontSize:'18px'}}>
                     {isStart ? 
                       <div>Pools are live now, Stake LPs to earn more SHIELD, No deposit fee</div> : 
                       <>
@@ -72,7 +72,7 @@ const Cemetery = () => {
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
                     Earn GUARDIAN by staking LP
                   </Typography>
-                  <Alert variant="filled" severity="warning" style={{background: '#b648bd'}}>
+                  <Alert variant="filled" severity="warning" style={{background: '#664b55'}}>
                     All below pools have ended. Please unstake and collect your rewards.
                   </Alert>
                   <Grid container spacing={3} style={{ marginTop: '20px' }}>
@@ -90,7 +90,7 @@ const Cemetery = () => {
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
                     Genesis Pools
                   </Typography>
-                  <Alert variant="filled" severity={isOver ? 'info' : 'success'} style={{background: '#b648bd'}}>
+                  <Alert variant="filled" severity={isOver ? 'info' : 'success'} style={{background: '#664b55', padding:'12px 20px', fontSize:'18px'}}>
                     {isOver ? 
                       <div>All below pools have ended. Please unstake and collect your rewards.</div> : 
                       <>

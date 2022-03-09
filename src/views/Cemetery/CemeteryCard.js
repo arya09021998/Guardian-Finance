@@ -36,7 +36,7 @@ const CemeteryCard = ({ bank }) => {
                 justifyContent: 'center',
               }}
             >
-              <TokenSymbol size={32} symbol={bank.depositTokenName} />
+              <TokenSymbol size={110} symbol={bank.depositTokenName} />
             </Box>
             <Typography variant="h5" component="h2">
               {bank.depositTokenName}

@@ -51,7 +51,7 @@ const App: React.FC = () => {
             <Route path="/farm">
               <Cemetery />
             </Route>
-            <Route path="/milkyway">
+            <Route path="/maegis">
               <Masonry />
             </Route>
             <Route path="/bond">

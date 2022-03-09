@@ -32,10 +32,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
-    color: '#fff',
-    'background-color': '#000',
-    // borderBottom: `1px solid ${theme.palette.divider}`,
-    padding: '10px',
+    'background-color': '#d8d8d8',
+    borderBottom: `1px solid ${theme.palette.divider}`,
+    padding: '10px 0',
     marginBottom: '3rem',
     zIndex: 2,
   },
@@ -51,19 +50,21 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     flexWrap: 'wrap',
-    ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+    borderTop: '2px solid #664a40',
+    borderBottom: '2px solid #664a40',
+    ['@media (min-width:1175px)']: { // eslint-disable-line no-useless-computed-key
       justifyContent: 'space-between',
     }
   },
   toolbarTitle: {
-    fontFamily: '"Amarante", cursive',
+    // fontFamily: '"Amarante", cursive',
     fontSize: '30px',
     flexGrow: 1,
   },
   link: {
     textTransform: 'uppercase',
-    color: '#fff',
-    fontSize: '14px',
+    color: '#464545',
+    fontSize: '19px',
     margin: theme.spacing(1, 2),
     textDecoration: 'none',
     '&:hover': {
@@ -80,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Nav = () => {
-  const matches = useMediaQuery('(min-width:900px)');
+  const matches = useMediaQuery('(min-width:1175px)');
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -102,18 +103,18 @@ const Nav = () => {
             {/* <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}> */}
               {/* <a className={ classes.brandLink } href="/">Guardian Finance</a> */}
               <Link to="/" color="inherit" className={classes.brandLink}>
-                <img src={Banner} alt='Guardian Finance Logo' width={230} height={60} style={{verticalAlign:'middle'}}/>
+                <img src={Banner} alt='Guardian Finance Logo' width={500} height={80} style={{verticalAlign:'middle'}}/>
               </Link>
             {/* </Typography> */}
-            <Box ml={3}>
+            <Box ml={3} style={{paddingTop:'20px'}}>
               <Link color="textPrimary" to="/" className={classes.link}>
                 Home
               </Link>
               <Link color="textPrimary" to="/farm" className={classes.link}>
-                Asteroid Belt
+                Fortress
               </Link>
-              <Link color="textPrimary" to="/milkyway" className={classes.link}>
-                Milkyway
+              <Link color="textPrimary" to="/maegis" className={classes.link}>
+                Aegis
               </Link>
               <Link color="textPrimary" to="/bond" className={classes.link}>
                 Bond
@@ -172,8 +173,8 @@ const Nav = () => {
               <Divider />
               <List>
                 <ListItemLink primary="Home" to="/" />
-                <ListItemLink primary="Farm" to="/farm" />
-                <ListItemLink primary="Milkyway" to="/milkyway" />
+                <ListItemLink primary="Fortress" to="/farm" />
+                <ListItemLink primary="Aegis" to="/maegis" />
                 <ListItemLink primary="Bond" to="/bond" />
                 {/* <ListItemLink primary="SBS" to="/sbs" />
                 <ListItemLink primary="Liquidity" to="/liquidity" />

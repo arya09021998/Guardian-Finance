@@ -9,12 +9,12 @@ const newTheme = createTheme({
     },
     background: {
       default: '#121212',
-      paper: '#000',
+      paper: '#00000073',
     },
     primary: {
       light: '#757ce8',
-      main: '#571eb1',
-      dark: '#2c2560',
+      main: '#664b55',
+      dark: '#3e2e34',
       contrastText: '#000',
     },
     secondary: {
@@ -30,8 +30,8 @@ const newTheme = createTheme({
     },
   },
   typography: {
-    color: '#2c2560',
-    fontFamily: ['"Poppins"', 'sans-serif'].join(','),
+    color: '#3e2e34',
+    fontFamily: ['"Spectral"', 'sans-serif'].join(','),
   },
 });
 
